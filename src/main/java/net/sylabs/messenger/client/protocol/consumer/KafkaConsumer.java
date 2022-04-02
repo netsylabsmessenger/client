@@ -49,17 +49,12 @@ public final class KafkaConsumer<MessageType extends MessageInterface> implement
         this.config = config;
         this.serializer = serializer;
 
+        this.groupId = channel.getConsumerId();
         this.consumerId = String.format(
             "%s-%s",
             channel.getConsumerId(),
             UUID.randomUUID()
         );
-
-        if (config.isCollaborativeMode()) {
-            this.groupId = channel.getConsumerId();
-        } else {
-            this.groupId = consumerId;
-        }
 
         this.consumer = createConsumer();
 

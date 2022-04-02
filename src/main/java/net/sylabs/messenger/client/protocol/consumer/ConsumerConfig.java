@@ -21,18 +21,12 @@ import java.util.Set;
 
 public class ConsumerConfig {
     private final Set<String> serverUris;
-    private final boolean collaborativeMode;
 
     public ConsumerConfig(Set<String> serverUris, boolean collaborativeMode) {
         this.serverUris = serverUris;
-        this.collaborativeMode = collaborativeMode;
     }
 
     public Set<String> getServerUris() {
         return serverUris;
-    }
-
-    public boolean isCollaborativeMode() {
-        return collaborativeMode;
     }
 }
