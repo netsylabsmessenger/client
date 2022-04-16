@@ -15,16 +15,7 @@
  * limitations under the License.
  */
 
-package net.sylabs.messenger.client.protocol.node.registry.exception;
+package net.sylabs.messenger.client.protocol.service;
 
-import net.sylabs.messenger.client.protocol.node.exception.NodeException;
-
-public class NodeRegistryException extends NodeException {
-    public NodeRegistryException(String message) {
-        super(message);
-    }
-
-    public NodeRegistryException(String message, Throwable cause) {
-        super(message, cause);
-    }
+public interface ServiceInterface {
 }

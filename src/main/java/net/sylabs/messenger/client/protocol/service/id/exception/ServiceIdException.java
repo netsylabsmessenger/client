@@ -15,8 +15,16 @@
  * limitations under the License.
  */
 
-package net.sylabs.messenger.client.protocol.node.registry;
+package net.sylabs.messenger.client.protocol.service.id.exception;
 
-// TODO: Implement this interface
-public interface NodeRegistryInterface {
+import net.sylabs.messenger.client.protocol.service.exception.ServiceException;
+
+public class ServiceIdException extends ServiceException {
+    public ServiceIdException(String message) {
+        super(message);
+    }
+
+    public ServiceIdException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }
